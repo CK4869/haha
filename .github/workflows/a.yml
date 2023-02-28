@@ -16,4 +16,4 @@ jobs:
           webRenderer: html
           targetBranch: deploy-web
           baseHref: /haha/
-          customArgs: --target lib\main.dart
+          customArgs: --target lib/main.dart
