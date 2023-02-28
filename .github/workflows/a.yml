@@ -1,0 +1,19 @@
+name: Build and deploy Web
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-web:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2 
+      - uses: subosito/flutter-action@v2
+      - uses: bluefireteam/flutter-gh-pages@v7
+        with:
+          webRenderer: html
+          targetBranch: deploy-web
+          baseHref: /haha/
+          customArgs: --target="lib\main\main_production.dart"
