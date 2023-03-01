@@ -1,6 +1,11 @@
 # This workflow analyses and tests every pull request.
 name: Pull Request Validation
-on: pull_request
+on: 
+  pull_request:
+  workflow_run:
+    workflows: [a]
+    types:
+      - completed
 
 jobs:
   analyze_code_before_merge:
