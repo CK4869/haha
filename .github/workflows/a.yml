@@ -21,7 +21,6 @@ jobs:
         uses: SpicyPizza/create-envfile@v1.3
         with:
           file_name: .env
-      - run: echo haha $API_KEY
       - run: flutter pub get
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
