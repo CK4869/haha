@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
 String apiKey = '';
-
 void main() {
   apiKey =
       const String.fromEnvironment('API_KEY', defaultValue: 'Hello World!');
@@ -42,6 +41,7 @@ class _MainAppState extends State<MainApp> {
       final imageUrl = jsonDecode(response.body)['data'][0];
       setState(() {
         img = imageUrl;
+        print(imageUrl);
       });
     } else {
       img = null;
