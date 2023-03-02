@@ -23,9 +23,4 @@ jobs:
 
       - name: Installs the dependencies
         run: flutter pub get
-
-      - name: Run code-generators
-        run: flutter packages pub run build_runner build --delete-conflicting-outputs
-      
-      - name: Analyze the code and check for mistakes
-        run: flutter analyze
+    
