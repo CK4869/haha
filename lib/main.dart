@@ -39,7 +39,7 @@ class _MainAppState extends State<MainApp> {
     );
 
     if (response.statusCode == 200) {
-      final imageUrl = jsonDecode(response.body)['data'][0]['b64_json'];
+      final imageUrl = jsonDecode(response.body)['data'][0];
       setState(() {
         img = imageUrl;
       });
