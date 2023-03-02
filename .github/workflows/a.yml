@@ -16,11 +16,7 @@ jobs:
         with:
           flutter-version: '3.7.3'
           channel: 'stable'
-          
-      - name: Create .env file
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          file_name: .env
+      - run: flutter clean    
       - run: flutter pub get
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
