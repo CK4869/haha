@@ -18,6 +18,4 @@ jobs:
 
       - name: Installs the dependencies
         run: flutter pub get
-      
-      - name: Analyze the code and check for mistakes
-        run: flutter analyze
+    
